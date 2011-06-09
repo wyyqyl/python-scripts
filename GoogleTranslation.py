@@ -18,7 +18,7 @@ def getTranslateHtml(text):
     return response.read().decode('utf-8')
 
 def getTranslateText(html):
-    rettxt = ''
+    rettxt = ""
     m = re.search(r'<span id=result_box.*?><span .*?>.*?</span></span>', html)
     if m:
         rettxt = re.sub('</?span.*?>', '', m.group(0))
@@ -32,4 +32,5 @@ def main():
             break
         print(getTranslateText(getTranslateHtml(text)))
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+	main()
