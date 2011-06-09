@@ -21,7 +21,11 @@ def chkqq(qqnum):
         return 'Unknown Status!'
 
 def main():
-    print(chkqq(904312667))
-    print(chkqq(435515401))
+	while True:
+		num = input("Input the qq num: ")
+		if num == "q":
+			return 0
+		print(chkqq(num))
 
 if __name__ == '__main__': main()
+
